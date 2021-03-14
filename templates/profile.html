@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+<style>
+    .left{
+        width:50%;
+        margin:10px;
+        font-size: 15px;
+        padding:10px;
+    }
+    .right{
+        width:30%;
+        padding:10px;
+    }
+</style>
+<div style="position:relative;width: 60%;left:20%;right:20%;height: 780px;;text-align: center;border: solid black;;">
+    <h1>Edit Your Profile</h1>
+    <br>
+        <br><form action="/FirstName" method="post"><input type="text" class="left" name="fname" Placeholder="{{posts.first_name}}" required><input type="submit" value="Change First Name" class="right"></form><br>
+        <form action="/SecondName" method="post"><input type="text" class="left" name="lname" Placeholder="{{posts.last_name}}" required><input type="submit" value="Change Second Name" class="right"></form><br>
+        <form action="/UserName" method="post"><input type="text" class="left" name="uname" placeholder="User Name" required><input type="submit" value="Set/Change User Name" class="right"></form><br>
+        <form action="/Bio" method="post"><input type="text" class="left" name="bio" placeholder="Bio" required><input type="submit" value="Set/Change Bio" class="right"></form><br>
+        <form action="/Password" method="post"><input type="password" class="left" name="password" placeholder="Change Password" class="right" required>
+        <input type="password" class="left" name="cpassword" placeholder="Confirm Changed Password" required ><br><input type="submit" value="Change Password" class="right"></form><br>
+        <form action="/Img" method="post" enctype="multipart/form-data"><input type="file" name="file" class="left" required><input type="submit" value="Set/Change Profile Pic" name="file" class="right"></form>
+        <br> 
+</div>
+
+{% endblock %}

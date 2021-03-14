@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<style>
+    #image{
+        position:absolute;
+        height:480px;
+        width:50%;
+        left:25%;
+        float:left;
+    }
+    .main-content h1{
+        font-size: 50px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .main-content h3{
+        font-size: 30px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .main-content p{
+        font-size: 25px;
+        font-family:monospace;
+    }
+</style>
+<div style="position: relative;height:520px;width:100%;">
+    <img src="../static/upload/{{posts.img}}" id="image">
+</div>
+
+
+    <div class="main-content" style="width:50%;left:25%;position: relative;">
+        <h1> {{posts.title}} </h1><br>
+        <h3> {{posts.sub_title}} </h3><br>
+        <p> {{posts.content}} </p>
+    </div>
+
+
+
+
+{% endblock %}

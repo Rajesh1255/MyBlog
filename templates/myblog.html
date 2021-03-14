@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+<style>
+    .subcontent::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    input{
+        font-size: 18px;
+        border:none;
+        padding:10px;
+        background-color: maroon;
+        color:white;
+    }
+    input:hover{
+        background-color:#4CAF50;
+        color:black;
+    }
+    input:focus{
+        outline: none;
+    }
+    .subtitle{
+      font-size: small;
+    }
+    .title{
+      font-size: 30px;
+    }
+    .para{
+      font-size: 20px;
+    }
+    
+</style>
+
+    <img src="../static/upload/{{signup.img}}" style="height:300px;width:20%;position: relative;left:40%;right:40%;">
+    <div style="position: relative;width: 20%;left:40%;right:40%;text-align: center;padding:10px;">
+        <h1 style="padding:5px;"> {% if signup.username is not none %} {{signup.username}} {% else %} {{signup.first_name}} {% endif %}</h1>
+        <h3>{% if signup.bio is not none %} {{signup.bio}} {% else %} {{ "" }} {% endif %}</h3>
+    </div>
+    <br><br><br><br>
+    <div id="container">
+        
+        {% for post in posts[-1::-1] %}
+        <div class="content">
+          
+           <div class="subcontent">
+               <a href="/mycontent/{{post.mod_slug}}" class="read-content">
+               <img src="../static/upload/{{post.img}}" style="height:200px;width:15%;vertical-align:-webkit-baseline-middle;float:left;padding: 10px;">
+               <div style="width:50%;">
+                <h1 class="title">{{post.title}}</h1></a>
+                <p class="subtitle">Author:{{post.fname}} date:{{post.date}} {% if post.update_date is not none %} Edited: {{post.update_date}} {% endif %}</p>
+            
+                <p class="para">{{post.content[0:140:1]}} . . . </p><br>
+            
+                <a href="/edit/{{post.mod_slug}}"><input type="submit" value="Edit"></a>
+                <a href="/delete/{{post.mod_slug}}"><input type="submit" value="Delete"></a>
+               </div>
+            </div>      
+        
+        </div>
+        
+        {% endfor %}
+        
+          </div>
+
+{% endblock %}

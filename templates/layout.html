@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="../static/style.css" rel="stylesheet">
+  <title>{{ Title }}</title>
+</head>
+
+
+<body>
+
+  <!-- Navigation Bar -->
+ 
+  <ul style="position: static;">
+    <li><a href="/">Home</a></li>
+    <li><a href="/create">Create</a></li>
+    <li><a href="/myblog">My Blog</a></li>
+    <li style="float:right"><a class="active" href="/login">{{user}}</a></li>
+    <li style="float:right"><a class="active" href="/signup" target="__blank">{{end}}</a></li>
+  </ul>
+
+  
+
+  {% block title %} 
+  
+  {% endblock %}
+    <!-- Footer -->
+  
+    <hr style="width: 100%; left:0;right:0;">
+    <footer style="position: relative;">
+      <div style="position: absolute; left:40%;right:40%">
+      <div class="icons">
+        <a href="#"><img src="../static/twitter.png" alt=""></a>
+        <a href="#"><img src="../static/github.png" alt=""></a>
+        <a href="#"><img src="../static/facebook-new.png" alt=""></a>
+      </div>
+
+      <div id="copyright">
+        <p><img src="../static/copyright.png" style="vertical-align: middle;"> Copyright My Blog 2021-22</p>
+      </div>
+    </div>
+    </footer>
+  </div>
+</body>
+</html>

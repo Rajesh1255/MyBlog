@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+
+<style>
+  .subcontent::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .subtitle{
+      font-size: small;
+    }
+    .title{
+      font-size: 30px;
+    }
+    .para{
+      font-size: 20px;
+    }
+</style>
+
+
+<!-- Header -->
+<header id="head">
+  <div id="subheading">
+    <h1 style="font-size: 100px; color:rgb(0, 0, 128, 0.8);">My Blog</h1>
+    <p style="font-size: 50px; color:maroon">This is created by ME</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div id="container">
+  
+    
+    {% for post in posts[-1::-1] %}
+    <div class="content">
+      
+      <div class="subcontent">
+          <a href="/mycontent/{{post.mod_slug}}" class="read-content">
+          <img src="../static/upload/{{post.img}}" style="height:200px;width:15%;vertical-align:-webkit-baseline-middle;float:left;padding: 10px;">
+          <div style="width:80%;padding: 10px;">
+           <h1 class="title">{{post.title}}</h1></a>
+           <p class="subtitle">Author:{{post.fname}} date:{{post.date}} {% if post.update_date is not none %} Edited: {{post.update_date}} {% endif %}</p>
+           <br>
+           
+       
+            <p class="para">{{post.content[0:200:1]}} . . . </p>
+          </div>
+       </div>      
+   
+   </div>
+
+    {% endfor %}
+    
+   
+   </div>
+    {% endblock %}

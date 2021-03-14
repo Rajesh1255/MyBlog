@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(128, 128, 128, 0.5);
+            height:100%;
+            width:100%;
+        }
+        form h1{
+            font-size: 50px;
+            text-decoration: underline;
+            padding:10px;
+        }
+        form label{
+            padding:10px;
+            font-size: 25px;
+            font-family:sans-serif;
+        }
+        input:focus{
+            outline: none;
+        }
+        input:not(#sub){
+            height:30px;
+            font-size: 20px;
+            padding:10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align: center;">
+    <form action="/login" method="post" style="position: absolute;width:50%;left:25%;top:30%;">
+        <h1>Login</h1>
+        <label> User Name</label><br>
+        <input type="email" name="email" placeholder="Email" required><br>
+        <label for=""> Password </label><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="submit" id="sub" style="margin-top:10px;font-size: 20px;padding:10px;" value="Login">
+        <br><h9><a href="/signup">Not have an account?</a> <a href="/forgetpassword_page1">Forget Password?</a></h9>
+    </form>
+    <div style="position:absolute;width:50%;left:25%;right:25%;top:60%;""><p style="color:red;font-size: 20px;">{{ warning }}</p></div>
+</body>
+</html>

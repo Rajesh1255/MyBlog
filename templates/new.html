@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        #container{
+            border: solid black;
+            width: 30%;
+            position: relative;
+            left:35%;
+            right:35%;
+            top:300px;
+            padding:10px;
+        }
+        legend{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input{
+            margin-top:10px;
+        }
+        #email{
+            width:100%;
+            padding: 15px;
+            font-size: 15px;;
+        }
+        #sub{
+            width:50%;
+            padding:15px;
+            font-size: 20px;
+            background-color: black;
+            color:white;
+            font-weight: bold;
+            border: none;
+        }
+        p{
+            font-size: 20px;
+        }
+        label{
+            font-weight: bolder;
+            font-size:20px;
+        }
+    </style>
+</head>
+<body>
+    
+        
+    <fieldset id="container">
+        
+        <legend>Reset Password</legend>
+        
+        <p>Please enter your OTP. 
+            </p>
+        
+        <br><br>
+        <label for="">OTP</label>
+        <form action="/new" method='post'>
+            <input type="text" name="otp" id="email" required><br>
+            <input type="submit" id="sub" value="Reset Password"><br>
+            
+        </form>
+    
+    
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ Title }}</title>
+    <style>
+        *{
+            border:0;
+            padding:0;
+            box-sizing: border-box;
+            background-color:lightgreen;
+        }
+        .signupform input{
+            border:solid;
+            border-color:rgb(0, 0, 0, 0.5);
+            margin:10px;
+            font-size: 15px;
+            color:black;
+            padding:5px;
+            width:90%;
+            background-color:#4CAF50;
+        }
+        input::-webkit-input-placeholder{
+            color:rgb(255, 255, 255);
+        }
+        .signupform{
+            position: absolute;
+            background-color:#4CAF50;
+            text-align: center;
+            width:50%;
+            left:25%;
+            right:25%;
+            padding:10px;
+        }
+        input:focus{
+            outline:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="height:800px;position: absolute;width:50%;left:25%;right:25%;text-align:center;">
+        <div >
+        <h1 >Create New Account</h1>
+        <form action="/signup" method="post" class="signupform">
+            <br><input type="text" name="fname" Placeholder="First Name" required><br>
+            <input type="text" name="lname" Placeholder="Second Name"><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="password" name="cpassword" placeholder="Confirm Password" required>
+            <br><input type="submit" value="Sign Up" id="signupbutton" style="background-color: lightgreen;border: none;">
+            <br> <a href="/login" style="text-decoration: none;background-color: #4CAF50;"> Log In Now.</a>
+        </form>
+        <div style="position:absolute;width:50%;left:25%;right:25%;top:55%;""><p style="color:red;font-size: 20px;">{{ warning }}</p></div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

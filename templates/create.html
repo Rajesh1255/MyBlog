@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+<style>
+    input:not(#sub), textarea{
+        border:none;border-bottom: solid;border-color: #4CAF50;padding:20px;font-size: 20px;width:100%;font-family: Arial, Helvetica, sans-serif;
+    }
+    input:focus{
+        outline: none;
+    }
+    textarea:focus{
+        outline:none;
+    }
+    #sub:hover{
+        color:white;
+    }
+</style>
+<div id="container" style="width: 60%;position: relative; left:20%;right:20%;height: 790px;">
+    <div style="text-align: center;font-family:Verdana, Geneva, Tahoma, sans-serif;padding:20px;"><h1 style="color:#4CAF50"> Create Your New Blog Here </h1></div>
+    <br><br><br>
+    <form action="/create" method="post" enctype="multipart/form-data">
+    <input type="text" name="title" placeholder="Title" required>
+    <br><input type="text" name="subtitle" placeholder="Subtitle" required>
+    <br> <textarea name="Content" id="content" cols="30" rows="10" placeholder="Content" style="resize:none;" required></textarea>
+    <br> <input type="file" name="file" style="border:none;" autocomplete="off" required>
+    <br> <br><br><input type="submit" id="sub" style="font-size: 20px;padding:5px;background-color:#4CAF50; border-radius: 5px;float:right;" value="Create">
+    </form>
+</div>
+
+
+
+{% endblock %}
