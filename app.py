@@ -362,4 +362,4 @@ def logout():
    session.pop('user',None)         
    return redirect('/')
 
-app.run(port=5000)
+app.run()
