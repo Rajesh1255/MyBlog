@@ -362,4 +362,4 @@ def logout():
    session.pop('user',None)         
    return redirect('/')
 
-app.run()
+app.run(debug=True, use_reloader=False)
