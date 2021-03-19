@@ -97,7 +97,7 @@ jupyterlab==2.1.5
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 libarchive-c==2.9
-llvmlite==0.33.0+1.g022ab0f
+# llvmlite==0.33.0+1.g022ab0f
 locket==0.2.0
 # lxml @ file:///C:/ci/lxml_1594822774489/work
 Mail==2.1.0
