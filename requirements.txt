@@ -159,7 +159,7 @@ Pygments==2.6.1
 pylint==2.5.3
 PyMySQL==1.0.2
 # PyNaCl @ file:///C:/ci/pynacl_1595000047588/work
-pyodbc===4.0.0-unsupported
+# pyodbc===4.0.0-unsupported
 # pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
 pyparsing==2.4.7
 pyreadline==2.1
