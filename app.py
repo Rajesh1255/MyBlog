@@ -50,6 +50,7 @@ def upload_image():
 
 # Post table in database
 class Post(db.Model):
+   __tablename__ = 'post'
    sno = db.Column(db.Integer, nullable=True, primary_key=True)
    email = db.Column(db.String(120), nullable=False)
    fname = db.Column(db.String(120), nullable=False)
@@ -64,6 +65,7 @@ class Post(db.Model):
 
 
 class Signup(db.Model):
+   __tablename__ = 'signup'
    sno = db.Column(db.Integer, nullable=True, primary_key=True)
    first_name = db.Column(db.String(120), nullable=False)
    last_name = db.Column(db.String(120), nullable=False)
