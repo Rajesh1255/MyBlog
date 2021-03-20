@@ -13,6 +13,7 @@ from flask_mail import Mail
 app = Flask(__name__)
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://{user}:{password}@{server}/{database}'.format(user='root', password='', server='localhost', database='myblog')
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://owoxdfrczkpzrx:a6bb0475d4f6811dbf3452971f5d9023725bff2aa3352b999447f97f7bfdb988@ec2-3-232-163-23.compute-1.amazonaws.com:5432/d12akjmouibu7e"
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 app.config['UPLOAD_FOLDER'] = 'static/upload/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
